@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://crvqwl1mql5q6"]
+
+[ext_resource type="Script" uid="uid://cwrvfbcr6e0j8" path="res://scripts/ui.gd" id="1_nb4k0"]
+
+[node name="ui" type="Control" node_paths=PackedStringArray("level", "cps", "label", "button")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -640.0
+offset_right = -360.0
+offset_bottom = -640.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nb4k0")
+level = NodePath("VBoxContainer/Label3")
+cps = NodePath("VBoxContainer/Label2")
+label = NodePath("VBoxContainer/Label")
+button = NodePath("VBoxContainer/Button")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -42.5
+offset_right = 66.5
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Level 0"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Coins Per Second"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Money:"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "More Money"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

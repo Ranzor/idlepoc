@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7dqtg4lihyl4"]
+
+[ext_resource type="PackedScene" uid="uid://crvqwl1mql5q6" path="res://ui/ui.tscn" id="1_ig7tw"]
+
+[node name="main" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ui" parent="CanvasLayer" instance=ExtResource("1_ig7tw")]
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
